@@ -35,8 +35,10 @@
 </head>
 
 <body>
+    <!-- Container -->
     <div id="container">
         <h1 class="text-center">The Ways to Sum To N</h1>
+        <!-- Start The First Panel-->
         <div class="panel">
             <h3>The First Way</h3>
             <div class="code-panel">
@@ -61,6 +63,8 @@
                 </p>
             </div>
         </div>
+        <!-- End the First Panel-->
+        <!-- Start the Second Panel -->
         <div class="panel">
             <h3>The Second Way</h3>
             <div class="code-panel">
@@ -80,6 +84,8 @@
                 </p>
             </div>
         </div>
+        <!-- End the Second Panel -->
+        <!-- Start the Third Panel -->
         <div class="panel">
             <h3>The Third Way</h3>
             <div class="code-panel">
@@ -99,9 +105,12 @@
                 </p>
             </div>
         </div>
+        <!-- End the Third Panel -->
     </div>
+    <!-- End Container -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        // first method
         var sum_to_n_a = function(n) {
             // your code here
             var sum = 0;
@@ -110,17 +119,18 @@
             }
             return sum;
         };
-
+        // second method
         var sum_to_n_b = function(n) {
             // your code here
             return (1 + n) * n / 2;
         };
 
+        // third method
         var sum_to_n_c = function(n) {
             // your code here
             return [...Array(n + 1).keys()].map(x => x).reduce((x, y) => x + y);
         };
-
+        // test methods
         var test_result = function(_type) {
             if (_type === 1) {
 
